@@ -85,7 +85,7 @@ If false returned, disable minimize failed. (for the same reason as run in other
 ## Authors
 
 * **tbvjaos510** - [tbvjaos510](https://github.com/tbvjaos510/)
-
+* **zhubaitian**  - https://github.com/zhubaitian/electron-disable-minimize
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
