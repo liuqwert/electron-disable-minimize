@@ -38,11 +38,18 @@ NAN_METHOD(DisableMinimize)
     HWND desktop = GetDesktopWindow();
     HWND hWorkerW = NULL;
     HWND hShellViewWin = NULL;
-    do
-    {
+
+    // find SHELLDLL_DefView in Progma
+    HWND progman = FindWindowEx(NULL, NULL, "Progman", NULL);
+    hShellViewWin = FindWindowEx(progman, NULL, "SHELLDLL_DefView", NULL );
+
+    if (!hShellViewWin) {
+      do
+      {
         hWorkerW = FindWindowEx(desktop, hWorkerW, "WorkerW", NULL);
         hShellViewWin = FindWindowEx(hWorkerW, 0, "SHELLDLL_DefView", 0);
-    } while (hShellViewWin == NULL && hWorkerW != NULL);
+      } while (hShellViewWin == NULL && hWorkerW != NULL);
+    }
 
     bool ok = true;
     if (hShellViewWin == NULL)
