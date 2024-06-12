@@ -5,7 +5,7 @@
   "gypfile": true,
   "keywords": [
     "disable minimize",
-    "electron bottom most",
+    "electron disable minimize",
     "block minimize"
   ],
   "main": "./build/Release/electron-disable-minimize",
@@ -21,10 +21,11 @@
     "url": "https://github.com/tbvjaos510/electron-disable-minimize"
   },
   "dependencies": {
-    "nan": "^2.14.0"
+    "nan": "^2.13.2",
+    "node-gyp": "^7.1.0"
   },
   "devDependencies": {
-    "electron": "latest",
-    "electron-rebuild": "^1.10.0"
+    "electron": "^11.2.2",
+    "electron-rebuild": "^2.2.0"
   }
 }
